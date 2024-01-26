@@ -102,13 +102,3 @@ const configData = (dataApi) => {
     }
     return config;
 }
-
-
-
-
-
-
-
-
-
-
