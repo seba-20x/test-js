@@ -1,23 +1,3 @@
-// const request = fetch("https://mindicador.cl/ai"); // llamar a la api
-
-// request
-// .then(resp => resp.json()) // convertir a json
-// .then(data => {
-        // manejar la data 
-//     let template = '<option hidden>Seleccione moneda</option>';
-//     template += `
-//         <option value="Dolar" id="dolar">${data.dolar.codigo}</option>
-//         <option value="Euro" id="euro">${data.euro.codigo}</option>
-//     `
-//     document.getElementById("moneda").innerHTML = template
-// })
-// .catch(error => {
-//     // console.error("error:", error)
-//     document.getElementById('moneda').innerHTML = `<option>Error: ${error.message}</option>`;
-   
-// })
-
-
 const getData = async() => {
     try {
         const resp = await fetch('https://mindicador.cl/api')
@@ -66,7 +46,7 @@ btnCalculate.addEventListener('click', async() => {
     if (!isNaN(inputValue) && !isNaN(selectedMonedaValue) && inputValue > 0) {
 
         const conversion = inputValue / selectedMonedaValue
-        inputValues.value = ''
+        // inputValues.value = ''
         
         document.getElementById('valor-convertido').textContent = conversion.toFixed(2);
 
